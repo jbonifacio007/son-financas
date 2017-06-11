@@ -58,6 +58,6 @@ class DefaultRepository implements RepositoryInterface
 
    public function find(int $id)
     {
-        return = $this->_model->findOrFail($id);
+        return = $this->_model->findOrFail($id)
     }
 }
