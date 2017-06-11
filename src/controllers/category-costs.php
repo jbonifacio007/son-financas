@@ -27,7 +27,7 @@ $app
   ->get('/category-costs', function() use($app){
         $view = $app->service('view.renderer');
 
-        $repository = $app->service('repository.factory');
+        $repository = $app->service('repository.factory')->factory(CategoryCost::class);
         $categories = $repository->all();
         
         return $view->render('category-costs/list.html.twig',[
