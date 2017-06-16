@@ -2,12 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/D:/son-financas/src/Application.php</file>
-            <file>file:/D:/son-financas/src/Plugins/ViewPlugin.php</file>
-            <file>file:/D:/son-financas/templates/category-costs/create.html.twig</file>
-            <file>file:/D:/son-financas/templates/category-costs/list.html.twig</file>
-            <file>file:/D:/son-financas/public/index.php</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

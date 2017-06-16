@@ -4,10 +4,13 @@ namespace SONFin\Plugins;
 
 
 
+use Interop\Container\ContainerInterface;
 use SONFin\Repository\RepositoryFactory;
 
 use SONFin\ServiceContainerInterface;
 use Illuminate\Database\Capsule\Manager as Capsule;
+
+use SONFin\Models\User;
 
 class DbPlugin implements PluginInterface
 {
@@ -19,9 +22,14 @@ class DbPlugin implements PluginInterface
         $capsule->bootEloquent();
 
         $container->add('repository.factory', new RepositoryFactory());
-//		$container->addLazy('category-cost.repository', function (ContainerInterface $container) {
-//		    return $container->get('repository.factory')->factory(CategoryCost::class);
-//		});
+		$container->addLazy('category-cost.repository', function (ContainerInterface $container) {
+		    return $container->get('repository.factory')->factory(CategoryCost::class);
+		});
+
+
+        $container->addLazy('user.repository', function (ContainerInterface $container) {
+    		return $container->get('repository.factory')->factory(User::class);
+		});
 
     }
 }
